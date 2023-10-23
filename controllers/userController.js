@@ -64,7 +64,7 @@ export const loginUser = async (req, res) => {
     const token = generateAuthToken(user);
 
     // Configura los encabezados CORS aquí
-    res.setHeader('Access-Control-Allow-Origin', 'https://mercadocarnes-backend.onrender.com'); // Reemplaza con la dirección y el puerto de tu frontend
+    res.setHeader('Access-Control-Allow-Origin', 'https://mercadocarnes.vercel.app'); // Reemplaza con la dirección y el puerto de tu frontend
     res.setHeader('Access-Control-Allow-Credentials', 'true'); // Habilita el intercambio de cookies entre el frontend y el backend si es necesario
 
     // Configura la cookie en la respuesta
