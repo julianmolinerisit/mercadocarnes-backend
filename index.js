@@ -11,10 +11,13 @@ app.use(express.json());
 // Configura CORS para permitir solicitudes desde el frontend
 app.use(
   cors({
-    origin: 'https://mercadocarnes.vercel.app', // Especifica el dominio y el protocolo
-    credentials: true, // Habilita el intercambio de cookies entre el frontend y el backend si es necesario
+    origin: 'https://mercadocarnes.vercel.app',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Especifica los métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'], // Especifica los encabezados permitidos
   })
 );
+
 
 app.use(cookieParser()); // Asegúrate de importar cookie-parser si no lo has hecho
 
